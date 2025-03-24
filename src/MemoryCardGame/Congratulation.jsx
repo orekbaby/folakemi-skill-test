@@ -2,9 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
 import { styled } from "@mui/system";
-import background from "../assets/images/celebration.gif"; // Background image
-import bgMusic from "../assets/audio/celebrate.mp3"; // Background music file
-import congratulationImage from "../assets/images/congrats2.png"; // Path to your congratulation image
+import background from "../assets/images/celebration.gif";
+import bgMusic from "../assets/audio/celebrate.mp3"; 
+import congratulationImage from "../assets/images/congrats2.png"; 
 
 // Styled Components
 const PixelBox = styled(Box)(({ theme }) => ({

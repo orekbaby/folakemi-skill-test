@@ -48,7 +48,7 @@ const WalletProvider = ({ children }) => {
 
   // Helper function to show toast notifications
   // I'm using a custom wrapper instead of direct Snackbar calls to keep the UI code clean
-  const showToast = (message, severity = "success", duration = 6000) => {
+  const showToast = (message, severity = "success", duration = 4000) => {
     setToastMessage(message);
     setToastSeverity(severity);
     setToastOpen(true);
@@ -164,7 +164,7 @@ const WalletProvider = ({ children }) => {
       {/* Global toast notification system for wallet events */}
       <Snackbar
         open={toastOpen}
-        autoHideDuration={4000}
+        autoHideDuration={3000}
         onClose={handleCloseToast}
         anchorOrigin={{ vertical: "top", horizontal: "right" }}
       >

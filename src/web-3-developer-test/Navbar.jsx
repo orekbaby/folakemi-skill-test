@@ -27,11 +27,10 @@ export default function Navbar() {
       position="static"
       elevation={0}
       sx={{
-        // Subtle gradient background for a modern look
-        background: "linear-gradient(90deg, #f8f9fa 0%, #e9f0f8 100%)",
-        color: "#2c3e50",
-        borderBottom: "1px solid #e0e7ff",
-      }}
+        background: "radial-gradient(circle, rgba(30, 20, 100, 0.5), rgba(5, 3, 15, 0.7)), #0a1a3a",
+    backgroundBlendMode: "darken",
+    boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.3)",
+        }}
     >
       <Container maxWidth="xl">
         <Toolbar
@@ -58,27 +57,26 @@ export default function Navbar() {
                 <MenuIcon />
               </IconButton>
             )}
-            <Typography
-              variant={isMobile ? "subtitle1" : "h6"}
-              component="div"
-              noWrap
-              sx={{
-                fontWeight: 600,
-                color: "#3a506b",
-                // Responsive font size
-                fontSize: {
-                  xs: "1rem",
-                  sm: "1.1rem",
-                  md: "1.25rem",
-                },
-                // Prevent long titles from breaking layout
-                maxWidth: { xs: "150px", sm: "200px", md: "none" },
-                overflow: "hidden",
-                textOverflow: "ellipsis",
-              }}
-            >
-              Memory Card Game
-            </Typography>
+        <Typography
+  variant={isMobile ? "subtitle2" : "body1"}
+  component="div"
+  noWrap
+  sx={{
+    fontWeight: 600,
+    fontStyle: "italic",
+    background: "linear-gradient(to right, #d9d9d9, #a6a6a6, #787878)",
+    WebkitBackgroundClip: "text",
+    WebkitTextFillColor: "transparent",
+    fontSize: { xs: "0.75rem", sm: "0.9rem", md: "1.5rem" }, // Made smaller
+    letterSpacing: "0.5px",
+    textShadow: "1px 1px 2px rgba(0,0,0,0.2)",
+    maxWidth: { xs: "150px", sm: "200px", md: "none" },
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+  }}
+>
+  Memory Card Game
+</Typography>
           </Box>
 
           {/* Right side - Wallet */}

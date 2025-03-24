@@ -1,4 +1,3 @@
-
 # folakemi-skill-test README.md
 
 A comprehensive README including both login and Web3 functionality.
@@ -19,6 +18,8 @@ A responsive Log in page application with functional modal and Web3 metamask wal
 - MetaMask wallet connection
 - Display of connected wallet address
 - Wallet address copy functionality
+- Disconnect Button
+- Modal that shows the user information
 - Persistent wallet connection
 - Comprehensive error handling for wallet interactions
 - Points system tied to wallet address
@@ -31,16 +32,33 @@ A responsive Log in page application with functional modal and Web3 metamask wal
 - Local Storage for session management
 
 ## Installation and Setup
-\`\`\`
+```
 git clone https://github.com/orekbaby/folakemi-skill-test.git
-cd frontend
 
 npm install
 npm start
-\`\`\`
+```
 
-## Demo
-[Live Demo](https://folakemi-card-memory-game.netlify.app/)
+## Login Implementation Details
+The login page simulates authentication since there is no registered user database. This ensures that the modal functionality can be demonstrated effectively. Here’s how it works:
+
+1. **Form Validation**:
+   - Ensures both fields (username and password) are filled before submission.
+   - Password is validated with specific security requirements, including length, uppercase, number, and special character checks.
+
+2. **Fake Authentication**:
+   - Since there are no registered users, an API call to a non-existent endpoint is attempted.
+   - If the request fails (which it will, due to no backend setup), a timeout is triggered after 2 seconds to simulate a successful login.
+   - This automatically logs in the user and shows the level selection modal.
+
+3. **User Experience Enhancements**:
+   - Displays a toast notification with error handling messages when authentication fails.
+   - Uses local storage to mimic session persistence.
+   - Smooth modal transitions to guide the user after a simulated login.
+
+4. **Game Mode Selection**:
+   - After a successful login (simulated), the user selects a game mode (Easy, Medium, Hard).
+   - The selection redirects the user to the appropriate game page.
 
 ## Web3 Implementation Details
 The application implements a complete wallet connection flow:
@@ -67,6 +85,4 @@ The application implements a complete wallet connection flow:
 - Enhance security with proper signature verification
 - Implement actual blockchain interactions for the game
 - Add unit and integration tests
-
-
 
